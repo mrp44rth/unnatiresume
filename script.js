@@ -1,6 +1,7 @@
 async function createPDF() {
     const { jsPDF } = window.jspdf;
 
+    // Get the form values
     const name = document.getElementById('name').value;
     const mobile = document.getElementById('mobile').value;
     const email = document.getElementById('email').value;
@@ -9,6 +10,12 @@ async function createPDF() {
     const experiences = document.getElementById('experience').value.split(',').map(e => e.trim());
     const objective = document.getElementById('objective').value; // New objective input
     const skills = document.getElementById('skills').value.split(',').map(s => s.trim()); // New skills input
+
+    // Validation check: Alert if any field is empty
+    if (!name || !mobile || !email || !address || !qualifications[0] || !experiences[0] || !objective || !skills[0]) {
+        alert("Please fill in all the fields before creating the PDF.");
+        return;
+    }
 
     const pdf = new jsPDF();
     const margin = 10;
