@@ -59,7 +59,7 @@ async function createPDF() {
             pdf.setFontSize(12);
             pdf.setFont('normal');
             pdf.text(objective, margin + 10, yPosition, { maxWidth: pdf.internal.pageSize.getWidth() - margin -20 });
-            yPosition += 25; 
+            yPosition += 35; 
 
             // Education section
             pdf.setFontSize(14);
