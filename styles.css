@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width:50%;
+    max-width: 50%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding is included in total width */
+    min-height: 40px; /* Minimum height for inputs */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Adjust the height dynamically based on content */
+.input-group input:focus {
+    border-color: #ff7e5f;
+    outline: none;
+    min-height: 60px; /* Height when focused */
+}
+
+.submit-btn {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #feb47b;
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    .submit-btn {
+        font-size: 16px;
+    }
+}
